@@ -1,0 +1,348 @@
+/* --- 1. CONFIGURACIÓN Y VARIABLES --- */
+:root {
+    --color-principal: #093e62;    
+    --color-secundario: #1b263b;
+    --color-texto: #e0e1dd;       
+    --color-detalle: #415a77;
+    --color-menu-hamburguesa: #e0e1dd;
+    --color-texto-secundario: #8b9bb4;
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-cuerpo: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth; /* Para que el desplazamiento sea suave al cliquear en los enlaces */
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+body {
+    background-color: var(--color-principal);
+    color: var(--color-texto);
+    font-family: var(--fuente-cuerpo);
+    line-height: 1.6;
+    font-size: 1rem;
+    h1 {
+        font-family: var(--fuente-titulos);
+        font-size: 3rem;
+        margin-bottom: 2rem;
+    }
+    h2 {
+        font-family: var(--fuente-titulos);
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+.contenedor-superior {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #1a1a1a; 
+}
+
+/* Encabezado */
+.header {
+    background-color: var(--color-secundario); 
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 1rem;
+    position: relative; 
+    z-index: 1001;
+}
+
+/* Contenedor del texto "Menu" y el botón animado */
+.contenedor-menu-hamburguesa {
+    display: flex;
+    align-items: center;
+    height: 3em;
+    padding-left: 1.5rem;
+    
+    &::after {
+        content: "Menu";
+        padding-left: 1.5rem;
+        font-size: clamp(1em, 5svw, 1.2em);
+    }
+}
+    
+.menu-hamburguesa {
+    height: 1.5em;
+    width: 2.5em;
+    position: relative;
+    cursor: pointer;
+    
+    /* Las 3 líneas */
+    .bar-ham {
+        width: 100%; /* Ocupan el 100% de los 2.5em del padre, no de la pantalla */
+        height: 0.1rem;
+        background-color: var(--color-texto);
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: transform .6s, opacity .8s, top .6s;
+    }
+
+    .bar-top { top: 15%; }
+    .bar-mid { top: 50%; }
+    .bar-bottom { top: 85%; }
+
+    /* Animación cuando JS le agrega la clase '.activo' */
+    &.activo .bar-top {
+        transform: translate(-50%, -50%) rotate(-315deg);
+        top: 50%;
+    }
+    
+    &.activo .bar-mid {
+        opacity: 0;
+    }
+    
+    &.activo .bar-bottom {
+        transform: translate(-50%, -50%) rotate(-225deg);
+        top: 50%;
+    }
+}
+
+.logo-equipo {
+    width: 7rem;
+    border-radius: 50%;
+    border: 0.5rem solid var(--color-detalle);
+}
+
+/* El menú de navegación deslizante lateral */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -150%;
+    background-color: var(--color-secundario); 
+    height: 100svh; 
+    width: 100svw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: left 0.5s ease-in-out;
+    z-index: 999;
+
+    &.activo { 
+        left: 0;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1em; 
+        font-family: var(--fontMenu); 
+    }
+
+    li {
+        width: 100%;
+        display: flex;
+        justify-content: center; 
+    }
+
+    .btn-nav {
+        display: block;       
+        width: 70%;
+        max-width: 80vw;
+        
+        text-align: center;
+        text-decoration: none;
+        font-size: 2em; 
+        font-weight: 500;     
+
+        color: var(--color-texto);
+        padding: 0.5rem 1.5rem;
+    
+        border: 0.2rem solid var(--color-detalle);
+        border-radius: 1rem;
+    
+        transition: all 0.5s ease;
+        
+        &:hover {
+            background-color: var(--color-detalle);
+            transform: scale(1.05);
+        }
+    }
+}
+
+.section-main {
+    margin: 5rem 1rem;
+}
+
+/* --- DISEÑO DE GRILLA (RESPONSIVE) --- */
+.equipo-grid, .proyectos-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* --- TARJETAS DE INTEGRANTES --- */
+.tarjeta-integrante {
+    background-color: var(--color-secundario);
+    padding: 1.25rem;
+    border-radius: 1rem;
+    text-align: center;
+    border: 0.5rem solid transparent;
+    transition: border 0.5s;
+
+    &:hover {
+        border: 0.5rem solid var(--color-detalle);
+    }
+
+    .avatar-container img {
+        width: 7.5rem;
+        height: 7.5rem;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-bottom: 1rem;
+        border: 0.3rem solid var(--color-detalle);
+    }
+
+    .btn-perfil {
+        display: inline-block;
+        margin-top: 1rem; 
+        color: var(--color-texto);
+        text-decoration: none;
+        font-size: 0.9rem;
+        border: 0.2rem solid var(--color-detalle);
+        border-radius: 1rem;
+        padding: 0.5rem 1.5rem;
+        transition: all 0.5s ease;
+        
+        &:hover {
+            background-color: var(--color-detalle);
+        }
+    }
+}
+
+.detalle-proyecto {
+    max-height: 0; /* Empieza colapsado */
+    overflow: hidden; /* Oculta el contenido que desborda */
+    transition: opacity 1s ease;
+    opacity: 0;
+    border-top: 0.5rem solid transparent;
+    margin-top: 0;
+}
+
+/* Esta clase se activa con el JS solo en la tarjeta clickeada */
+.detalle-proyecto.visible {
+    max-height: 100%; /* Un valor lo suficientemente grande para el contenido (~500px) */
+    opacity: 1;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 0.1rem solid var(--color-detalle);
+}
+
+/* --- TARJETAS DE PROYECTOS --- */
+.proyecto-item {
+    background-color: var(--color-secundario);
+    padding: 1.5rem;
+    border-radius: 1rem; 
+    border: 0.5rem solid transparent; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border 0.5s;
+
+    &:hover {
+        border: 0.5rem solid var(--color-detalle);
+    }
+    .detalle-proyecto {
+        margin-bottom: 1.25rem; 
+
+        p {
+            margin-bottom: 0.5rem; 
+        }
+
+        small {
+            color: var(--color-texto-secundario);
+            font-weight: bold;
+        }
+    }
+
+    .boton-detalles {
+        background-color: transparent;
+        color: var(--color-texto);
+        border: 0.2rem solid var(--color-detalle);
+        padding: 0.5rem 1.25rem;
+        cursor: pointer;
+        border-radius: 0.5rem;
+        font-family: var(--fuente-cuerpo);
+        font-weight: bold;
+        transition: all 0.3s ease;
+        align-self: flex-start;
+
+        &:hover {
+            background-color: var(--color-detalle);
+            color: var(--color-texto);
+        }
+    }
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    text-align: center;
+    padding: 1.875rem 1.25rem;
+    background-color: var(--color-secundario);
+    margin-top: 2.5rem;
+    font-size: 0.9rem;
+    
+    div p {
+        margin: 0.5rem 0;
+    }
+}
+
+/* --- BREAKPOINTS --- */
+
+/* Móviles pequeños (400px) */
+@media (min-width: 400px) {
+    .logo-equipo {
+        max-width: 35%;
+    }
+    .container {
+        padding: 0.5rem;
+    }
+    h1 { font-size: 1.8rem; }
+}
+
+/* Tablets (900px) */
+@media (min-width: 900px) {
+    .logo-equipo {
+        max-width: 30%;
+    }
+
+    .navbar
+    {
+        justify-content: flex-start;
+        width: 50svw;
+    }
+    .section-main {
+        padding: 3.75rem 2.5rem;
+    }
+}
+
+/* Escritorio (1200px) */
+@media (min-width: 1200px) {
+    .logo-equipo {
+        max-width: 25%;
+    }
+    .equipo-grid {
+        grid-template-columns: repeat(5, 1fr); /* 5 integrantes por fila */
+    }
+    .container {
+        max-width: 68.75rem;
+        margin: 0 auto;
+    }
+}

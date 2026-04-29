@@ -3,60 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Grupo Orión - TP1 IFTS 29</title>
+    <title>Equipo Orión - TP1 IFTS 29</title>
 </head>
 <body>
     
-    <header>
-        <h1>Grupo Orión</h1>
-    </header>
+    <div class="contenedor-superior">
+        <header id="header" class="header">
+            <div class="contenedor-menu-hamburguesa">
+                <div class="menu-hamburguesa">
+                    <div class="bar-ham bar-top"></div>
+                    <div class="bar-ham bar-mid"></div>
+                    <div class="bar-ham bar-bottom"></div>
+                </div>
+            </div>
+            <img src="img/logo-orion.png" alt="Logo" class="logo-equipo">
+        </header>
+
+        <nav id="navbar" class="navbar">
+            <ul class="links-navegacion">
+                <li><a href="#main" class="btn-nav">Inicio</a></li>
+                <li><a href="./bitacora.html" class="btn-nav">Bitácora</a></li>
+                <li><a href="#integrantes" class="btn-nav">Equipo</a></li>
+                <li><a href="#proyectos-anteriores" class="btn-nav">Proyectos</a></li>
+            </ul>
+        </nav>
+    </div>
     
-    <nav>
-        <!-- Enlaces de navegacion -->
-        <a href="./leandro.html">Leandro Ferrero</a>
-        <a href="./bitacora.html">Bitacora</a>
-    </nav>
-    
-    <main>
-        <section id="presentacion">
+    <main id="main" class="container">
+        <section id="presentacion" class="section-main">
+            <h1>Equipo Orión</h1>
             <h2>Sobre Nosotros</h2>
             <p>Somos un equipo de estudiantes de la Tecnicatura Superior en Desarrollo de Software en el IFTS N.° 29. Nos enfocamos en crear soluciones robustas, fusionando la disciplina técnica con la innovación creativa.</p>
         </section>
 
-        <section id="integrantes">
+        <section id="integrantes" class="section-main">
             <h2>Equipo de Trabajo</h2>
-            <div>
-                <article>
-                    <div>
+            <div class="equipo-grid">   
+                <article class="tarjeta-integrante">
+                    <div class="avatar-container">
                         <img src="img/leandro-avatar.jpg" alt="Leandro Raúl Ferrero">
                     </div>
                     <h3>Leandro Raúl Ferrero</h3>
-                    <a href="leandro.html">Ver Perfil Completo</a>
+                    <a href="leandro.html" class="btn-perfil">Ver Perfil</a>
+                </article>
+
+                <article class="tarjeta-integrante">
+                    <div class="avatar-container">
+                        <img src="img/carolina-avatar.jpg" alt="Carolina Corradi">
+                    </div>
+                    <h3>Carolina Corradi</h3>
+                    <a href="carolina.html" class="btn-perfil">Ver Perfil</a>
+                </article>
+
+                <article class="tarjeta-integrante">
+                    <div class="avatar-container">
+                        <img src="img/manuel-avatar.jpg" alt="Manuel Espíndola">
+                    </div>
+                    <h3>Manuel Espíndola</h3>
+                    <a href="manuel.html" class="btn-perfil">Ver Perfil</a>
+                </article>
+
+                <article class="tarjeta-integrante">
+                    <div class="avatar-container">
+                        <img src="img/gabriela-avatar.jpg" alt="Gabriela Gonzalez">
+                    </div>
+                    <h3>Gabriela Gonzalez</h3>
+                    <a href="gabriela.html" class="btn-perfil">Ver Perfil</a>
+                </article>
+
+                <article class="tarjeta-integrante">
+                    <div class="avatar-container">
+                        <img src="img/leonardo-avatar.jpg" alt="Leonardo Vargas">
+                    </div>
+                    <h3>Leonardo Vargas</h3>
+                    <a href="leonardo.html" class="btn-perfil">Ver Perfil</a>
                 </article>
             </div>
         </section>
 
-        <section id="proyectos-anteriores">
-            <h2>Trayectoria del Grupo Orión</h2>
+        <section id="proyectos-anteriores" class="section-main">
+            <h2>Trayectoria del Equipo Orión</h2>
             <p>Previamente a este proyecto web, nuestro equipo ha colaborado con éxito en:</p>
-            <div>
+            
+            <div class="proyectos-grid">
                 <div class="proyecto-item">
-                    <h3>Club Deportivo Orion - Versión escritorio </h3>
+                    <h3>Club Deportivo Orion - Versión escritorio</h3>
                     <div class="detalle-proyecto">
                         <p>Sistema integral de gestión de socios, cobro de cuotas y administración de actividades deportivas.</p>                    
                         <small>Tecnologías: C# / .NET / MySQL</small>
                     </div>
                     <button class="boton-detalles">Ver detalles</button>
                 </div>
+                
                 <div class="proyecto-item">
                     <h3>Club Deportivo Orion - Versión movil</h3>
                     <div class="detalle-proyecto">
-                        <p>Adaptacion de del Club Deportivo Orión para dispositivos moviles</p>
+                        <p>Adaptación del Club Deportivo Orión para dispositivos móviles.</p>
                         <small>Tecnologías: Kotlin / Android Studio</small>
                     </div>
                     <button class="boton-detalles">Ver detalles</button>
                 </div>
+                
                 <div class="proyecto-item">
                     <h3>Clínica SePrice</h3>
                     <div class="detalle-proyecto">
@@ -66,16 +118,17 @@
                     <button class="boton-detalles">Ver detalles</button>
                 </div>
             </div>
-        </section>
+        </section> 
     </main>
     
-    <footer>
+    <footer class="main-footer">
         <div>
             <p>Proyecto realizado para la materia Desarrollo de Sistemas Web (Front End) - IFTS N.° 29</p>
             <p>Buenos Aires, Argentina - 2026</p>
         </div>
     </footer>
 
-    <script src="./js/script.js"></script>
+    <script src="./js/desplegable.js"></script>
+    <script src="./js/menu-hamburguesa.js"></script>
 </body>
-</html>
+</html> 
