@@ -182,14 +182,16 @@ body {
 }
 
 /* --- DISEÑO DE GRILLA (RESPONSIVE) --- */
-.equipo-grid, .proyectos-grid {
+.equipo-grid, .proyectos-grid, 
+.peliculas-grid, .discos-grid,
+.habilidades-grid {
     display: grid;
     gap: 1.5rem;
     margin-top: 2rem;
 }
 
 /* --- TARJETAS DE INTEGRANTES --- */
-.tarjeta-integrante {
+.tarjeta-item  {
     background-color: var(--color-secundario);
     padding: 1.25rem;
     border-radius: 1rem;
@@ -227,7 +229,7 @@ body {
     }
 }
 
-.detalle-proyecto {
+.detalle-tarjeta {
     max-height: 0; /* Empieza colapsado */
     overflow: hidden; /* Oculta el contenido que desborda */
     transition: opacity 1s ease;
@@ -237,7 +239,7 @@ body {
 }
 
 /* Esta clase se activa con el JS solo en la tarjeta clickeada */
-.detalle-proyecto.visible {
+.detalle-tarjeta.visible {
     max-height: 100%; /* Un valor lo suficientemente grande para el contenido (~500px) */
     opacity: 1;
     margin-top: 1rem;
@@ -246,7 +248,7 @@ body {
 }
 
 /* --- TARJETAS DE PROYECTOS --- */
-.proyecto-item {
+.tarjeta-item, .tarjeta-personal {
     background-color: var(--color-secundario);
     padding: 1.5rem;
     border-radius: 1rem; 
@@ -259,7 +261,8 @@ body {
     &:hover {
         border: 0.5rem solid var(--color-detalle);
     }
-    .detalle-proyecto {
+
+    .detalle-tarjeta {
         margin-bottom: 1.25rem; 
 
         p {
@@ -271,7 +274,7 @@ body {
             font-weight: bold;
         }
     }
-
+    
     .boton-detalles {
         background-color: transparent;
         color: var(--color-texto);
@@ -282,12 +285,41 @@ body {
         font-family: var(--fuente-cuerpo);
         font-weight: bold;
         transition: all 0.3s ease;
-        align-self: flex-start;
-
+        align-self: center;
+        
         &:hover {
             background-color: var(--color-detalle);
             color: var(--color-texto);
         }
+    }
+}
+
+
+.tarjeta-personal {
+    display: flex; /* Para poner texto e imagen lado a lado */
+    flex-direction: row; 
+    gap: 3rem; /* Espacio generoso entre texto y avatar */
+    align-items: center;
+    text-align: left; /* Alineación de texto a la izquierda para mejor lectura */
+
+    .perfil-info {
+        flex: 2; /* El texto ocupa más espacio */
+    }
+
+    .avatar-container {
+        flex: 1; /* El avatar ocupa el resto */
+    }
+
+    .avatar-container img {
+        width: 14rem; /* Avatar más grande para destacar */
+        height: 14rem;
+    }
+
+    ul {
+        list-style: none; 
+        margin-bottom: 1rem; 
+        color: var(--color-texto-secundario); /*[cite: 2] */
+        padding: 0;
     }
 }
 
@@ -338,7 +370,7 @@ body {
     .logo-equipo {
         max-width: 25%;
     }
-    .equipo-grid {
+    .equipo-grid{
         grid-template-columns: repeat(5, 1fr); /* 5 integrantes por fila */
     }
     .container {

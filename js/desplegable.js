@@ -4,8 +4,8 @@ document.addEventListener('DOMContentLoaded', () => {
     botonesDetalles.forEach(boton => {
         boton.addEventListener('click', () => {
             // Seleccionamos solo la tarjeta donde se hizo clic
-            const tarjeta = boton.closest('.proyecto-item');
-            const detalle = tarjeta.querySelector('.detalle-proyecto');
+            const tarjeta = boton.closest('.tarjeta-item');
+            const detalle = tarjeta.querySelector('.detalle-tarjeta');
             
             // Alternamos la clase 'visible' solo en este detalle
             detalle.classList.toggle('visible');
