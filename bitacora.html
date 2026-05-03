@@ -32,7 +32,54 @@
             </ul>
         </nav>
     </div>
-    <main></main>
-    <footer></footer>
+    
+    <main id="main" class="container">
+    <section class="section-main">
+        <h1>Bitácora del Proyecto</h1>
+        <h2>Registro de Actividades</h2>
+        <p>Evolución de las tareas y fases implementadas en el desarrollo de este trabajo prácrico.</p>
+        
+        <div class="proyectos-grid">
+            <article class="tarjeta-item tarjeta-bitacora">
+                <h3>Fase 1: Estructura del Proyecto</h3>
+                <div class="detalle-tarjeta">
+                    <p> Se organizó el directorio principal creando la estructura base y se añadieron los archivos <code>index.html</code> y los de lps pergiles individuales en la raíz.
+                        Asimismo, se agregaron en la raiz la carpeta css con la hoja de estilos <code>styles.css</code>, la carpeta img para los recursos gráficos y la carpeta js.
+                        Esta última contiene los archivos <code>desplegable.js</code> el que contiene la lógica para alternar la visibilidad de los detalles en las tarjetas y el archivo <code>menu-hamburguesa.js</code> que controla la navegación</p>
+                </div>
+            </article>
+            
+            <article class="tarjeta-item tarjeta-bitacora">
+                <h3>Fase 3: Diseño y Tipografía</h3>
+                <div class="detalle-tarjeta">
+                    <p>Se enlazaron correctamente las tipografías Montserrat y Roboto a través de Google Fonts y se verificó su aplicación en la interfaz. El layout se organizó con Flexbox para adaptarse a dispositivos.</p>
+                </div>
+            </article>
+
+            <article class="tarjeta-item tarjeta-bitacora">
+                <h3>Fase 4: Estructuración HTML</h3>
+                <div class="detalle-tarjeta">
+                    <p>Maquetación de las secciones principales. Se agregaron textos alternativos (<code>alt</code>) en todas las imágenes para cumplir con la accesibilidad.</p>
+                </div>
+            </article>
+            <article class="tarjeta-item tarjeta-bitacora">
+                <h3>Fase 2: Repositorio y Publicación</h3>
+                <div class="detalle-tarjeta">
+                    <p>Se creó y configuró el repositorio en GitHub, subiendo los archivos del proyecto. Se realizó la publicación en línea a través de Vercel.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+</main>
+    
+    <footer class="main-footer">
+        <div>
+            <p>Proyecto realizado para la materia Desarrollo de Sistemas Web (Front End) - IFTS N.° 29</p>
+            <p>Buenos Aires, Argentina - 2026</p>
+        </div>
+    </footer>
+
+    <script src="./js/desplegable.js"></script>
+    <script src="./js/menu-hamburguesa.js"></script>
 </body>
 </html>
