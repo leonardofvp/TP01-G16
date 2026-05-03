@@ -3,15 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bitacora</title>
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Equipo Orión - Bitácora</title>
 </head>
 <body>
-    <header>
-        <h1>Bitacora del proyecto</h1>
-    </header>
-    <nav>
-        <a href="./index.html">Volver al inicio</a>
-    </nav>
+    <div class="contenedor-superior">
+        <header id="header" class="header">
+            <div class="contenedor-menu-hamburguesa">
+                <div class="menu-hamburguesa">
+                    <div class="bar-ham bar-top"></div>
+                    <div class="bar-ham bar-mid"></div>
+                    <div class="bar-ham bar-bottom"></div>
+                </div>
+            </div>
+            <img src="img/logo-orion.png" alt="Logo" class="logo-equipo">
+        </header>
+
+        <nav id="navbar" class="navbar">
+            <ul class="links-navegacion">
+                <li><a href="index.html#main" class="btn-nav">Inicio</a></li>
+                <li><a href="./bitacora.html" class="btn-nav">Bitácora</a></li>
+                <li><a href="index.html#integrantes" class="btn-nav">Equipo</a></li>
+                <li><a href="index.html#proyectos-anteriores" class="btn-nav">Proyectos</a></li>
+            </ul>
+        </nav>
+    </div>
     <main></main>
     <footer></footer>
 </body>
