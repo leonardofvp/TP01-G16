@@ -56,7 +56,7 @@ Se han implementado funciones dinámicas para mejorar la interactividad del usua
 - **Tipografías:**
 - [x] Uso de Google Fonts
   - Títulos: [Montserrat](https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap)
-  - Cuerpo del texto: [Roboto] (https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap y https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap)
+  - Cuerpo del texto: [Roboto](https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap)
 
 - [x] **Iconografía:** el diseño y la interacción del sitio se hicieron de forma propia, utilizando código nativo, transiciones de CSS y elementos interactivos personalizados en HTML semántico para asegurar un rendimiento óptimo.
 
