@@ -12,7 +12,7 @@ El presente trabajo práctico consiste en el desarrollo de la landing page del G
 
 ## Integrantes del Equipo Orión
 
-- [x] **Carolina Corradi** [ agregar ]
+- [x] **Carolina Corradi** [(https://github.com/carotramp)]
 - [x] **Manuel Espíndola** [ agregar ]
 - [x] **Leandro Ferrero** [ agregar ]
 - [x] **Gabriela Gonzalez** [(https://github.com/melinya-byte)]
