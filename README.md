@@ -15,7 +15,7 @@ El presente trabajo práctico consiste en el desarrollo de la landing page del G
 - [x] **Carolina Corradi** [ agregar ]
 - [x] **Manuel Espíndola** [ agregar ]
 - [x] **Leandro Ferrero** [ agregar ]
-- [x] **Gabriela Gonzalez** [(https://mi-portafolio-personal-three.vercel.app/) ]
+- [x] **Gabriela Gonzalez** [(https://github.com/melinya-byte)]
 - [x] **Leonardo Vargas** [ agregar ]
 
 ## Estructura de Archivos
