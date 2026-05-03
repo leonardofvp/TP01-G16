@@ -8,15 +8,19 @@ El presente trabajo práctico consiste en el desarrollo de la landing page del G
 ## Repositorio y enlace al Proyecto Desplegado
 
 - [x] Repositorio en GitHub creado
-- [x] **Enlace en Vercel:** [https://tp-01-g16.vercel.app/]
+- [x] **Enlace en Vercel:** [Ver sitio](https://tp-01-g16.vercel.app/)
+
+---
 
 ## Integrantes del Equipo Orión
 
-- [x] **Carolina Corradi** [(https://github.com/carotramp)]
-- [x] **Manuel Espíndola** [ agregar ]
-- [x] **Leandro Ferrero** [ agregar ]
-- [x] **Gabriela Gonzalez** [(https://github.com/melinya-byte)]
-- [x] **Leonardo Vargas** [ agregar ]
+- [x] **Carolina Corradi** [GitHub](https://github.com/carotramp)
+- [x] **Manuel Espíndola** [GitHub](https://github.com/Filogos)
+- [x] **Leandro Ferrero** [GitHub](https://github.com/LeaFerrero)
+- [x] **Gabriela Gonzalez** [GitHub](https://github.com/melinya-byte)
+- [x] **Leonardo Vargas** [GitHub](https://github.com/leonardofvp)
+
+---
 
 ## Estructura de Archivos
 El proyecto se ha organizado siguiendo los lineamientos de buenas prácticas, separando los recursos en sus respectivas carpetas:
@@ -28,7 +32,9 @@ El proyecto se ha organizado siguiendo los lineamientos de buenas prácticas, se
 - [x] Archivo `bitacora.html` completo
 - [x] Archivo `README.md` actualizado con descripción y checklist.
 
-![Estructura de archivos](img/raiz.png)   
+![Estructura de archivos](img/raiz.png)
+
+---
 
 ## Funcionalidades Básicas: Funciones dinámicas en JavaScript
 
@@ -36,44 +42,50 @@ Se han implementado funciones dinámicas para mejorar la interactividad del usua
 
 - [x] **Menú de Hamburguesa (`menu-hamburguesa.js`):** Permite desplegar y ocultar la barra de navegación en dispositivos móviles al hacer clic en el botón de tres líneas horizontales.
 - [x] **Tarjetas interactivas (`desplegable.js`):** Muestra u oculta información detallada (como artista, año, etc.) en las tarjetas de presentación al presionar el botón "Ver detalles". El texto del botón cambia dinámicamente a "Ocultar detalles" cuando la información está visible.
+- [x] Las funcionalidades dinámicas fueron implementadas tanto en la portada como en las páginas individuales de cada integrante.
+
+---
 
 ## Estructura y Diseño (HTML y CSS)
 
-- [x] Estructura Semántica: Páginas organizadas con etiquetas como <header> <nav> <main> <section> y <article> respetando el directorio raíz para las páginas individuales (index.html, leandro.html, etc.).
-
+- [x] Estructura Semántica: Páginas organizadas con etiquetas como `<header>`, `<nav>`, `<main>`, `<section>` y `<article>`, respetando el directorio raíz para las páginas individuales.
 - [x] **Diseño Responsivo** (Flexbox y Media Queries): Las tarjetas y el layout se adaptan automáticamente a distintos tamaños de pantalla (móviles, tablets y escritorios).
+- [x] **Variables y Estilos:** Uso de variables en CSS para mantener una paleta de colores consistente (`--color-principal`, `--color-secundario`, etc.) y tipografías (Montserrat y Roboto) importadas desde Google Fonts.
 
-- [x] **Variables y Estilos:** Uso de variables en CSS para mantener una paleta de colores consistente (--color-principal, --color-secundario, etc.) y tipografías (Montserrat y Roboto) importadas desde Google Fonts.
+---
 
 ## Guía de Estilos
 
-- **Paleta de Colores:**
-  - Color principal: `#093e62`
-  - Color secundario: `#1b263b`
-  - Color de detalles: `#415a77`
-  - Color de texto principal: `#e0e1dd`
-  - Color de texto secundario: `#8b9bb4`
+### Paleta de Colores:
+- Color principal: `#093e62`
+- Color secundario: `#1b263b`
+- Color de detalles: `#415a77`
+- Color de texto principal: `#e0e1dd`
+- Color de texto secundario: `#8b9bb4`
 
-- **Tipografías:**
+### Tipografías:
 - [x] Uso de Google Fonts
-  - Títulos: [Montserrat](https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap)
-  - Cuerpo del texto: [Roboto](https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap)
+- Títulos: Montserrat  
+- Cuerpo del texto: Roboto  
 
-- [x] **Iconografía:** el diseño y la interacción del sitio se hicieron de forma propia, utilizando código nativo, transiciones de CSS y elementos interactivos personalizados en HTML semántico para asegurar un rendimiento óptimo.
+- [x] **Iconografía:** El diseño y la interacción del sitio se realizaron con código nativo, transiciones de CSS y elementos interactivos personalizados en HTML semántico.
 
-- [x] **Transiciones:** Efectos visuales al pasar el cursor (hover) sobre botones y elementos interactivos para enriquecer la interfaz.
+- [x] **Transiciones:** Efectos visuales al pasar el cursor (hover) sobre botones y elementos interactivos.
 
+---
 
-- **Privacidad y Datos Personales:** - *Aviso de privacidad:* Algunos nombres, información y avatares/imágenes utilizados son ficticios, creados exclusivamente para preservar la identidad y privacidad de los integrantes del equipo.
+## Privacidad y Datos Personales
+- Aviso de privacidad: Algunos nombres, información y avatares/imágenes utilizados son ficticios, creados exclusivamente para preservar la identidad y privacidad de los integrantes del equipo.
 
-
+---
 
 ## Uso de Herramientas de Inteligencia Artificial
 
 Para optimizar el flujo de desarrollo y mantener buenas prácticas en el código, se integró el uso de herramientas de Inteligencia Artificial como asistente técnico:
 
-- **Herramienta de IA utilizada:** Gemini.
+- **Herramientas utilizadas:** Gemini y ChatGPT.
 - **Uso en Lógica y Debugging:**
-  - Se utilizó para optimizar la estructura del código JavaScript (`desplegable.js` y `menu-hamburguesa.js`).
+  - Se utilizó Gemini para optimizar la estructura del código JavaScript (`desplegable.js` y `menu-hamburguesa.js`).
+  - Se utilizó ChatGPT como apoyo para resolver dudas de estructura HTML, adaptación al diseño grupal y corrección de estilos.
 - **Imágenes:**
-  - Algunas ilustraciones del proyecto (i.e. Logo del equipo) fueron creados utilizando generación de imágenes con IA.
+  - Algunas ilustraciones del proyecto (por ejemplo, el logo del equipo) fueron creadas utilizando generación de imágenes con IA.
