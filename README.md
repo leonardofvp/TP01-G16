@@ -28,8 +28,9 @@ El proyecto se ha organizado siguiendo los lineamientos de buenas prácticas, se
 - [x] Archivo `bitacora.html` completo
 - [x] Archivo `README.md` actualizado con descripción y checklist.
 
-## Funcionalidades Básicas:
-## Funciones dinámicas en JavaScript
+![Estructura de archivos](img/raiz.png)   
+
+## Funcionalidades Básicas: Funciones dinámicas en JavaScript
 
 Se han implementado funciones dinámicas para mejorar la interactividad del usuario sin necesidad de recargar la página:
 
