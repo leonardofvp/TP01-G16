@@ -323,6 +323,36 @@ body {
     }
 }
 
+/* --- TARJETA BITÁCORA --- */
+.tarjeta-bitacora {
+    background-color: var(--color-secundario);
+    padding: 1.5rem;
+    border-radius: 1rem; 
+    border: 0.5rem solid transparent; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border 0.5s;
+
+    /* Hace que el contenido del detalle sea siempre visible */
+    .detalle-tarjeta {
+        max-height: none; 
+        opacity: 1;
+        margin-top: 1rem; 
+        padding-top: 1rem;
+        border-top: 0.1rem solid var(--color-detalle);
+
+        p {
+            margin-bottom: 0.5rem; 
+        }
+    }
+
+    &:hover {
+        border: 0.5rem solid var(--color-detalle);
+    }
+}
+
+
 /* --- FOOTER --- */
 .main-footer {
     text-align: center;
