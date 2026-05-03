@@ -8,7 +8,7 @@ El presente trabajo práctico consiste en el desarrollo de la landing page del G
 ## Repositorio y enlace al Proyecto Desplegado
 
 - [x] Repositorio en GitHub creado
-- [x] **Enlace en Vercel:** [ agregar ]
+- [x] **Enlace en Vercel:** [https://tp-01-g16.vercel.app/]
 
 ## Integrantes del Equipo Orión
 
