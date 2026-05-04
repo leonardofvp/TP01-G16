@@ -406,6 +406,7 @@ body {
       .header a:hover,  .menu-hamburguesa:hover, .contenedor-menu-hamburguesa:hover {
     
     transform: scale(1.1); /* agranda un poco */
+      }
 }
 
 /* Escritorio (1200px) */
@@ -422,7 +423,7 @@ body {
     }
 
     .header a:hover, .tarjeta-item:hover, .menu-hamburguesa:hover, .contenedor-menu-hamburguesa:hover {
-    
     transform: scale(1.2); /* agranda un poco */
+    }
 }
 
