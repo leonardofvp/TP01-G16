@@ -296,29 +296,21 @@ body {
 
 
 .tarjeta-personal {
-    display: flex; /* Para poner texto e imagen lado a lado */
-    flex-direction: row; 
-    gap: 3rem; /* Espacio generoso entre texto y avatar */
+    display: flex;
+    flex-direction: column; 
+    gap: 3rem;
     align-items: center;
-    text-align: left; /* Alineación de texto a la izquierda para mejor lectura */
-
-    .perfil-info {
-        flex: 2; /* El texto ocupa más espacio */
-    }
-
-    .avatar-container {
-        flex: 1; /* El avatar ocupa el resto */
-    }
 
     .avatar-container img {
-        width: 14rem; /* Avatar más grande para destacar */
-        height: 14rem;
+        width: 10rem;
+        border-radius: 50%;
+        border: 0.3rem solid var(--color-detalle);
     }
 
     ul {
         list-style: none; 
         margin-bottom: 1rem; 
-        color: var(--color-texto-secundario); /*[cite: 2] */
+        color: var(--color-texto-secundario);
         padding: 0;
     }
 }
@@ -392,6 +384,14 @@ body {
     }
     .section-main {
         padding: 3.75rem 2.5rem;
+    }
+
+    .tarjeta-personal {
+    flex-direction: row;
+
+        .avatar-container img {
+            width: 14rem;
+        }
     }
 }
 
