@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>Equipo Orión - Bitácora</title>
+    <title>Equipo Orión: Bitácora</title>
 </head>
 <body>
     <div class="contenedor-superior">
@@ -23,6 +23,7 @@
             <a href="index.html"><img src="img/logo-orion.png" alt="Logo" class="logo-equipo"></a>
         </header>
 
+        <!-- Navegación global incluida para evitar el botón "Atrás" del navegador -->
         <nav id="navbar" class="navbar">
             <ul class="links-navegacion">
                 <li><a href="index.html#main" class="btn-nav">Inicio</a></li>
@@ -34,43 +35,59 @@
     </div>
     
     <main id="main" class="container">
-    <section class="section-main">
-        <h1>Bitácora del Proyecto</h1>
-        <h2>Registro de Actividades</h2>
-        <p>Evolución de las tareas y fases implementadas en el desarrollo de este trabajo prácrico.</p>
-        
-        <div class="proyectos-grid">
-            <article class="tarjeta-item tarjeta-bitacora">
-                <h3>Fase 1: Estructura del Proyecto</h3>
-                <div class="detalle-tarjeta">
-                    <p> Se organizó el directorio principal creando la estructura base y se añadieron los archivos <code>index.html</code> y los de lps pergiles individuales en la raíz.
-                        Asimismo, se agregaron en la raiz la carpeta css con la hoja de estilos <code>styles.css</code>, la carpeta img para los recursos gráficos y la carpeta js.
-                        Esta última contiene los archivos <code>desplegable.js</code> el que contiene la lógica para alternar la visibilidad de los detalles en las tarjetas y el archivo <code>menu-hamburguesa.js</code> que controla la navegación</p>
-                </div>
-            </article>
+        <section class="section-main">
+            <h1>Bitácora del Proyecto</h1>
+            <h2>Registro del Proceso de Desarrollo</h2>
+            <p>Documentación de la evolución, decisiones y resolución de problemas durante la implementación del sitio web del Equipo Orión.</p>
             
-            <article class="tarjeta-item tarjeta-bitacora">
-                <h3>Fase 3: Diseño y Tipografía</h3>
-                <div class="detalle-tarjeta">
-                    <p>Se enlazaron correctamente las tipografías Montserrat y Roboto a través de Google Fonts y se verificó su aplicación en la interfaz. El layout se organizó con Flexbox para adaptarse a dispositivos.</p>
-                </div>
-            </article>
+            <div class="proyectos-grid">
+                
+                <!-- Requerimiento: Decisiones de diseño -->
+                <article class="tarjeta-item">
+                    <h3>Decisiones de diseño tomadas</h3>
+                    <div class="detalle-tarjeta">
+                        <p>
+                            El equipo adoptó un enfoque <em>Mobile First</em>, estructurando el layout principal con Flexbox para asegurar que la interfaz responda correctamente a los breakpoints exigidos (400px, 900px y 1200px). 
+                            Se estandarizó la tipografía utilizando Montserrat y Roboto vía Google Fonts para garantizar consistencia visual, evitando fuentes genéricas. 
+                            A nivel arquitectura, definimos mantener los archivos HTML en la raíz del proyecto y aislar la lógica y estilos en directorios separados (<code>/css</code>, <code>/js</code>, <code>/img</code>). 
+                            Para la paleta de colores se optó por tonos azules que complementan el logotipo del equipo, el cual fue generado mediante IA (Gemini Pro). 
+                            Esta misma herramienta funcionó como asistente creativo para definir las bases estéticas del sitio. Finalmente, decidimos aplicar esta hoja de estilos global
+                            a las páginas de todos los integrantes para mantener una coherencia visual absoluta en toda la navegación.
+                        </p>
+                    </div>
+                    <button class="boton-detalles">Ver detalles</button>
+                </article>
+                
+                <!-- Requerimiento: Dificultades encontradas y cómo se resolvieron -->
+                <article class="tarjeta-item">
+                    <h3>Dificultades encontradas y soluciones</h3>
+                    <div class="detalle-tarjeta">
+                        <p>
+                            Enfrentamos un problema de alineación al estructurar las tarjetas personales con <code>flex-direction: column</code>. 
+                            Inicialmente, las imágenes de los avatares se desfasaban hacia la izquierda porque estaban configuradas con un ancho porcentual (<code>width: 50%</code>), lo que provocaba que calcularan su tamaño en base a su contenedor en lugar de centrarse. 
+                            La solución técnica fue modificar el dimensionamiento a unidades relativas estáticas (<code>14rem</code>). Esto permitió que la propiedad <code>align-items: center</code> de Flexbox tomara el control absoluto del bloque, centrando perfectamente la imagen sin importar la resolución de la pantalla.
+                        </p>
+                    </div>
+                    <button class="boton-detalles">Ver detalles</button>
+                </article>
 
-            <article class="tarjeta-item tarjeta-bitacora">
-                <h3>Fase 4: Estructuración HTML</h3>
-                <div class="detalle-tarjeta">
-                    <p>Maquetación de las secciones principales. Se agregaron textos alternativos (<code>alt</code>) en todas las imágenes para cumplir con la accesibilidad.</p>
-                </div>
-            </article>
-            <article class="tarjeta-item tarjeta-bitacora">
-                <h3>Fase 2: Repositorio y Publicación</h3>
-                <div class="detalle-tarjeta">
-                    <p>Se creó y configuró el repositorio en GitHub, subiendo los archivos del proyecto. Se realizó la publicación en línea a través de Vercel.</p>
-                </div>
-            </article>
-        </div>
-    </section>
-</main>
+                <!-- Requerimiento: Cambios importantes realizados -->
+                <article class="tarjeta-item">
+                    <h3>Cambios importantes realizados</h3>
+                    <div class="detalle-tarjeta">
+                        <p>
+                            Durante la etapa de integración, tuvimos que reestructurar el maquetado del encabezado. 
+                            Al diseñar las vistas individuales de cada integrante, notamos que se rompía la regla de usabilidad estipulada en los requerimientos. 
+                            Para evitar que el usuario dependiera del botón "Atrás" del navegador, desarrollamos un menú de navegación principal (<code>#navbar</code>) y lo replicamos globalmente en todos los archivos HTML. 
+                            Esto implicó ajustar los scripts de <code>menu-hamburguesa.js</code> para que las rutas relativas funcionaran correctamente desde cualquier punto del sitio.
+                        </p>
+                    </div>
+                    <button class="boton-detalles">Ver detalles</button>
+                </article>
+
+            </div>
+        </section>
+    </main>
     
     <footer class="main-footer">
         <div>
