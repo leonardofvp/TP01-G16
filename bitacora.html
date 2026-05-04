@@ -40,51 +40,46 @@
             <h2>Registro del Proceso de Desarrollo</h2>
             <p>Documentación de la evolución, decisiones y resolución de problemas durante la implementación del sitio web del Equipo Orión.</p>
             
-            <div class="proyectos-grid">
-                
-                <!-- Requerimiento: Decisiones de diseño -->
-                <article class="tarjeta-item">
-                    <h3>Decisiones de diseño tomadas</h3>
-                    <div class="detalle-tarjeta">
-                        <p>
-                            El equipo adoptó un enfoque <em>Mobile First</em>, estructurando el layout principal con Flexbox para asegurar que la interfaz responda correctamente a los breakpoints exigidos (400px, 900px y 1200px). 
-                            Se estandarizó la tipografía utilizando Montserrat y Roboto vía Google Fonts para garantizar consistencia visual, evitando fuentes genéricas. 
-                            A nivel arquitectura, definimos mantener los archivos HTML en la raíz del proyecto y aislar la lógica y estilos en directorios separados (<code>/css</code>, <code>/js</code>, <code>/img</code>). 
-                            Para la paleta de colores se optó por tonos azules que complementan el logotipo del equipo, el cual fue generado mediante IA (Gemini Pro). 
-                            Esta misma herramienta funcionó como asistente creativo para definir las bases estéticas del sitio. Finalmente, decidimos aplicar esta hoja de estilos global
-                            a las páginas de todos los integrantes para mantener una coherencia visual absoluta en toda la navegación.
-                        </p>
-                    </div>
-                    <button class="boton-detalles">Ver detalles</button>
-                </article>
-                
-                <!-- Requerimiento: Dificultades encontradas y cómo se resolvieron -->
-                <article class="tarjeta-item">
-                    <h3>Dificultades encontradas y soluciones</h3>
-                    <div class="detalle-tarjeta">
-                        <p>
-                            Enfrentamos un problema de alineación al estructurar las tarjetas personales con <code>flex-direction: column</code>. 
-                            Inicialmente, las imágenes de los avatares se desfasaban hacia la izquierda porque estaban configuradas con un ancho porcentual (<code>width: 50%</code>), lo que provocaba que calcularan su tamaño en base a su contenedor en lugar de centrarse. 
-                            La solución técnica fue modificar el dimensionamiento a unidades relativas estáticas (<code>14rem</code>). Esto permitió que la propiedad <code>align-items: center</code> de Flexbox tomara el control absoluto del bloque, centrando perfectamente la imagen sin importar la resolución de la pantalla.
-                        </p>
-                    </div>
-                    <button class="boton-detalles">Ver detalles</button>
-                </article>
+            <div class="bitacora-grid">              
+				<!-- Requerimiento: Decisiones de diseño -->
+				<article class="tarjeta-item">
+					<h3>Decisiones de diseño tomadas</h3>
+					<div class="detalle-tarjeta">
+						<ul>
+							<li><strong>Enfoque y Layout:</strong> Adopción de <em>Mobile First</em> estructurando el layout principal con Flexbox para responder a los breakpoints exigidos (400px, 900px y 1200px).</li>
+							<li><strong>Tipografía:</strong> Estandarización con Montserrat y Roboto vía Google Fonts para garantizar consistencia visual.</li>
+							<li><strong>Arquitectura:</strong> Archivos HTML en la raíz del proyecto y lógica/estilos en directorios separados (<code>/css</code>, <code>/js</code>, <code>/img</code>).</li>
+							<li><strong>Estética visual:</strong> Uso de tonos azules complementarios al logotipo generado por IA (Gemini Pro), aplicando una hoja de estilos global para lograr coherencia absoluta en la navegación.</li>
+							<li><strong>Animaciones:</strong> Desplazamiento horizontal para el menú hamburguesa mientras se despliega. 
+								Estiramiento y contracción vertical de las tarjetas al interactuar con el botón "Ver detalles" y "Ocultar detalles". Arandamiento del menú, el logo del equipo, las tarjetas y botones al hacer hover.</li>
+					</div>
+					<button class="boton-detalles">Ver detalles</button>
+				</article>
 
-                <!-- Requerimiento: Cambios importantes realizados -->
-                <article class="tarjeta-item">
-                    <h3>Cambios importantes realizados</h3>
-                    <div class="detalle-tarjeta">
-                        <p>
-                            Durante la etapa de integración, tuvimos que reestructurar el maquetado del encabezado. 
-                            Al diseñar las vistas individuales de cada integrante, notamos que se rompía la regla de usabilidad estipulada en los requerimientos. 
-                            Para evitar que el usuario dependiera del botón "Atrás" del navegador, desarrollamos un menú de navegación principal (<code>#navbar</code>) y lo replicamos globalmente en todos los archivos HTML. 
-                            Esto implicó ajustar los scripts de <code>menu-hamburguesa.js</code> para que las rutas relativas funcionaran correctamente desde cualquier punto del sitio.
-                        </p>
-                    </div>
-                    <button class="boton-detalles">Ver detalles</button>
-                </article>
+				<!-- Requerimiento: Dificultades encontradas y cómo se resolvieron -->
+				<article class="tarjeta-item">
+					<h3>Dificultades encontradas y soluciones</h3>
+					<div class="detalle-tarjeta">
+						<ul>
+							<li><strong>Problema de alineación:</strong> Al estructurar tarjetas personales con <code>flex-direction: column</code>, los avatares se desfasaban porque usaban un ancho porcentual (<code>width: 50%</code>), calculando su tamaño en base al contenedor en lugar de centrarse.</li>
+							<li><strong>Solución técnica:</strong> Se modificó el dimensionamiento a unidades relativas estáticas (<code>14rem</code>). Esto permitió que <code>align-items: center</code> tomara el control absoluto, centrando perfectamente la imagen en cualquier resolución.</li>
+						</ul>
+					</div>
+					<button class="boton-detalles">Ver detalles</button>
+				</article>
 
+				<!-- Requerimiento: Cambios importantes realizados -->
+				<article class="tarjeta-item">
+					<h3>Cambios importantes realizados</h3>
+					<div class="detalle-tarjeta">
+						<ul>
+							<li><strong>Problema de usabilidad:</strong> En las vistas individuales se rompía la regla de navegación, obligando al usuario a depender del botón "Atrás" del navegador.</li>
+							<li><strong>Reestructuración:</strong> Se desarrolló un menú principal (<code>#navbar</code>) que fue replicado globalmente en todos los archivos HTML.</li>
+							<li><strong>Ajuste de Scripts:</strong> Se modificó <code>menu-hamburguesa.js</code> para garantizar que las rutas relativas funcionaran correctamente desde cualquier punto del sitio.</li>
+						</ul>
+					</div>
+					<button class="boton-detalles">Ver detalles</button>
+				</article>
             </div>
         </section>
     </main>

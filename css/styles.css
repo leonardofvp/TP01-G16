@@ -192,7 +192,8 @@ body {
 /* --- DISEÑO DE GRILLA (RESPONSIVE) --- */
 .equipo-grid, .proyectos-grid, 
 .peliculas-grid, .discos-grid,
-.habilidades-grid, .metodologia-grid {
+.habilidades-grid, .metodologia-grid,
+.bitacora-grid {
     display: grid;
     gap: 2rem;
     margin-top: 2rem;
@@ -248,7 +249,7 @@ body {
 
 /* Esta clase se activa con el JS solo en la tarjeta clickeada */
 .detalle-tarjeta.visible {
-    max-height: 100%; /* Un valor lo suficientemente grande para el contenido (~500px) */
+    max-height: 100%;
     opacity: 1;
     margin-top: 1rem;
     padding-top: 1rem;
@@ -303,6 +304,19 @@ body {
     }
 }
 
+.bitacora-grid {
+	.detalle-tarjeta {
+		text-align: left;
+		ul {
+			padding-left: 1.5rem;
+			list-style-type: disc;
+		}
+
+		li {
+			margin-bottom: 0.8rem;
+		}
+	}
+}
 
 .tarjeta-personal {
     display: flex;
