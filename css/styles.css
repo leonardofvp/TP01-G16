@@ -117,9 +117,6 @@ body {
     height: 90px;
 }
 
-
-
- 
 .logo-equipo {
     width: 100%;
     border-radius: 50%;
@@ -169,7 +166,7 @@ body {
         
         text-align: center;
         text-decoration: none;
-        font-size: 2em; 
+        font-size: clamp(1.2rem, 8vw, 2.5rem); 
         font-weight: 500;     
 
         color: var(--color-texto);
@@ -194,9 +191,9 @@ body {
 /* --- DISEÑO DE GRILLA (RESPONSIVE) --- */
 .equipo-grid, .proyectos-grid, 
 .peliculas-grid, .discos-grid,
-.habilidades-grid {
+.habilidades-grid, .metodologia-grid {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
     margin-top: 2rem;
 }
 
@@ -267,6 +264,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     transition: border 0.5s;
+    align-items: center;
 
     &:hover {
         border: 0.5rem solid var(--color-detalle);
@@ -323,6 +321,27 @@ body {
         color: var(--color-texto-secundario);
         padding: 0;
     }
+}
+
+
+.contenedor-imagen-pelicula, .leo-contenedor-imagen-habilidad {
+	margin-top: 2rem;
+
+	.imagen-pelicula, .leo-imagen-habilidad {
+		width: 10rem; 
+		border-radius: 10%;
+	}
+}
+
+.leo-contenedor-imagen-habilidad {
+	margin: 2rem;
+
+	.leo-imagen-habilidad {
+		height: 4.375rem;  
+		width: 5.625rem;    
+		border-radius: 20%; 
+
+	}
 }
 
 /* --- TARJETA BITÁCORA --- */
@@ -422,8 +441,20 @@ body {
         margin: 0 auto;
     }
 
-    .header a:hover, .tarjeta-item:hover, .menu-hamburguesa:hover, .contenedor-menu-hamburguesa:hover {
-    transform: scale(1.2); /* agranda un poco */
+    .header a, 
+    .tarjeta-item, 
+    .tarjeta-personal,
+    .menu-hamburguesa, 
+    .contenedor-menu-hamburguesa {
+        transition: transform 0.3s ease-in-out; /* Controla la suavidad y el tiempo */
+    }
+
+    .header a:hover, 
+    .tarjeta-item:hover, 
+    .tarjeta-personal:hover,
+    .menu-hamburguesa:hover, 
+    .contenedor-menu-hamburguesa:hover {
+        transform: scale(1.1); /* Un 1.2 puede ser mucho y pixelar, 1.1 suele ser más sutil */
     }
 }
 

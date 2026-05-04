@@ -21,13 +21,17 @@
                     <div class="bar-ham bar-bottom"></div>
                 </div>
             </div>
-           <a href="index.html"><img src="img/logo-orion.png" alt="Logo" class="logo-equipo"></a>
+            <a href="index.html"><img src="img/logo-orion.png" alt="Logo" class="logo-equipo"></a>
         </header>
 
         <nav id="navbar" class="navbar">
             <ul class="links-navegacion">
                 <li><a href="./index.html" class="btn-nav">Inicio</a></li>
                 <li><a href="./bitacora.html" class="btn-nav">Bitácora</a></li>
+                <li><a href="./index.html#integrantes" class="btn-nav">Equipo</a></li>
+				<li><a href="./index.html#metodologia" class="btn-nav">Metodologías</a></li>
+				<li><a href="./index.html#tecnologias" class="btn-nav">Tecnologías</a></li>
+                <li><a href="./index.html#proyectos-anteriores" class="btn-nav">Proyectos</a></li>
             </ul>
         </nav>
     </div>
@@ -62,38 +66,44 @@
                         </p> 
                     </div>
                     <div class="avatar-container">
-                        <img src="./img/leo/leo.png" alt="Avatar de Leonardo Vargas" style="border-radius: 10%">
+                        <img src="./img/leo.png" alt="Avatar de Leonardo Vargas">
                     </div>
                 </div>
             </article>
         </section>
 
-<section id="habilidades" class="section-main">
-    <h2>Habilidades</h2>
-    
-    <!-- El contenedor que aplica el display: grid -->
-    <div class="habilidades-grid">       
-        <article class="tarjeta-item">
-           <div><img src="/img/leo/java.png" alt="java" height="70px" width="90px" style="border-radius: 20%;">
-            <h3>JAVA</h3></div> 
-            <p>Cuento con conocimientos en desarrollo con Java, incluyendo programación orientada a objetos (POO), manejo de estructuras de datos y desarrollo de aplicaciones backend. He trabajado con herramientas y frameworks del ecosistema Java, aplicando buenas prácticas de desarrollo, control de versiones y resolución de problemas. Me enfoco en escribir código limpio, mantenible y eficiente.</p>
-        </article>
+        <section id="habilidades" class="section-main">
+            <h2>Habilidades</h2>
+            
+            <!-- El contenedor que aplica el display: grid -->
+            <div class="habilidades-grid">       
+                <article class="tarjeta-item">
+                	<div class="leo-contenedor-imagen-habilidad">
+                        <img src="/img/java.png" class="leo-imagen-habilidad">
+                    </div> 
+                    <h3>JAVA</h3>
+                    <p>Cuento con conocimientos en desarrollo con Java, incluyendo programación orientada a objetos (POO), manejo de estructuras de datos y desarrollo de aplicaciones backend. He trabajado con herramientas y frameworks del ecosistema Java, aplicando buenas prácticas de desarrollo, control de versiones y resolución de problemas. Me enfoco en escribir código limpio, mantenible y eficiente.</p>
+                </article>
 
-        <article class="tarjeta-item">
-            <div><img src="/img/leo/spring.png" alt="spring" width="90px" style="border-radius: 10%;"></div>
-            <h3>SPRING BOOT</h3>
-            <p>Cuento con conocimientos en desarrollo de aplicaciones backend utilizando Spring Boot, enfocado en la creación de APIs REST, manejo de dependencias y configuración automática. Tengo experiencia trabajando con arquitectura en capas, integración con bases de datos y uso de herramientas como control de versiones. Me enfoco en aplicar buenas prácticas para desarrollar soluciones escalables, mantenibles y eficientes.</p>
-        </article>
+                <article class="tarjeta-item">
+                    <div class="leo-contenedor-imagen-habilidad">
+                        <img src="/img/spring.png" alt="spring" class="leo-imagen-habilidad">
+                    </div>
+                    <h3>SPRING BOOT</h3>
+                    <p>Cuento con conocimientos en desarrollo de aplicaciones backend utilizando Spring Boot, enfocado en la creación de APIs REST, manejo de dependencias y configuración automática. Tengo experiencia trabajando con arquitectura en capas, integración con bases de datos y uso de herramientas como control de versiones. Me enfoco en aplicar buenas prácticas para desarrollar soluciones escalables, mantenibles y eficientes.</p>
+                </article>
 
-        <article class="tarjeta-item">
-            <div><img src="/img/leo/mysql.jpg  " alt="mysql" height="70px" width="90px" style="border-radius: 10%;"></div>
-            <h3>MYSQL</h3>
-            <p>Cuento con conocimientos en diseño y administración de bases de datos MySQL, incluyendo la creación de esquemas, consultas SQL y optimización de rendimiento. Tengo experiencia trabajando con herramientas de gestión de bases de datos y aplicando buenas prácticas para garantizar la integridad y seguridad de los datos.</p>
-        </article>
+                <article class="tarjeta-item">
+                    <div class="leo-contenedor-imagen-habilidad">
+                        <img src="/img/mysql.jpg  " alt="mysql" class="leo-imagen-habilidad">
+                    </div>
+                    <h3>MYSQL</h3>
+                    <p>Cuento con conocimientos en diseño y administración de bases de datos MySQL, incluyendo la creación de esquemas, consultas SQL y optimización de rendimiento. Tengo experiencia trabajando con herramientas de gestión de bases de datos y aplicando buenas prácticas para garantizar la integridad y seguridad de los datos.</p>
+                </article>
 
-       
-    </div>
-</section>
+            
+            </div>
+        </section>
 
         <!-- Películas Favoritas -->
         <section id="peliculas-favoritas" class="section-main">
@@ -102,35 +112,45 @@
             <div class="peliculas-grid">
                 <article class="tarjeta-item">
                     <h3>Enemigo al asecho</h3>  
-                    <div><img src="img/leo/enemigo.jpg" alt="enemigoAlasecho" width="150px" style="border-radius: 10%"></div>
-                    <p>
+                    <div class="contenedor-imagen-pelicula">
+                        <img src="img/enemigo.jpg" alt="Imagen pelicula Enemigo al asecho" class="imagen-pelicula">
+                    </div>
+                    <div class="detalle-tarjeta">
+                        <p>
                             Un enemigo oculto acecha al protagonista,
                             generando tensión y miedo constante mientras espera el momento de atacar.
-                    </p>
-                  
+                        </p>
+                    </div>
+                    <button class="boton-detalles">Ver detalles</button>
                 </article>
 
-                 <article class="tarjeta-item">
+                <article class="tarjeta-item">
                     <h3>Matrix</h3>  
-                    <div><img src="img/leo/matrix.jpg" alt="matrix" width="150px" style="border-radius: 10%"></div>
-                    <p>
-                             Un hacker descubre la realidad simulada y lucha contra máquinas 
+                    <div class="contenedor-imagen-pelicula">
+                        <img src="img/matrix.jpg" alt="Imagen pelicula Matrix" class="imagen-pelicula">
+                    </div>
+                    <div class="detalle-tarjeta">
+                        <p>
+                            Un hacker descubre la realidad simulada y lucha contra máquinas 
                             que controlan a la humanidad.
-                    </p>
-                  
+                        </p>
+                    </div>
+                    <button class="boton-detalles">Ver detalles</button>
                 </article>
 
-                 <article class="tarjeta-item">
-                    <h3>Tropa de Elit</h3>  
-                    <div><img src="img/leo/tropa.jpg" alt="tropaDeElit" width="150px" style="border-radius: 10%"></div>
-                    <p>
-                            <p>Un grupo policial combate el crimen en favelas, enfrentando corrupción,
-                                 violencia y decisiones extremas.
-                    </p>
-                  
+                <article class="tarjeta-item">
+                    <h3>Tropa de Elite</h3>  
+                    <div class="contenedor-imagen-pelicula">
+                        <img src="img/tropa.jpg" alt="Imagen pelicula Tropa de Elite" class="imagen-pelicula">
+                    </div>
+                    <div class="detalle-tarjeta">
+                        <p>
+                            Un grupo policial combate el crimen en favelas, enfrentando corrupción,
+                            violencia y decisiones extremas.
+                        </p>
+                    </div>
+                    <button class="boton-detalles">Ver detalles</button>  
                 </article>
-                
-                
             </div>
         </section>  
 
