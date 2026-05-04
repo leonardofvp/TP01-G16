@@ -103,12 +103,15 @@ Se han implementado funciones dinámicas para mejorar la interactividad del usua
 
 Para optimizar el flujo de desarrollo y mantener buenas prácticas en el código, se integró el uso de herramientas de Inteligencia Artificial como asistente técnico:
 
-- **Herramientas utilizadas:** Gemini pro y ChatGPT.
+- **Herramientas utilizadas:** Gemini Pro y ChatGPT.
 - **Uso en Lógica y Debugging:**
-  - Se utilizó Gemini para generar la base de los estilos CSS y optimizar la estructura del código JavaScript (`desplegable.js`).
-    - **Criterio de prompt:** Se le solicitó generar código CSS bajo el enfoque _Mobile First_ usando Flexbox, y optimizar scripts de JS puro para alternar clases en el DOM.
+  - Se utilizó Gemini Pro para generar la base de los estilos CSS y optimizar la estructura del código JavaScript (`desplegable.js`).
+    - **Criterio de prompt:** Se le solicitó generar código CSS para tener una base de estilos con la que iniciar, y optimizar scripts de JS puro para alternar clases en el DOM.
   - Se utilizó ChatGPT como apoyo para resolver dudas de estructura HTML, adaptación al diseño grupal y corrección de estilos.
     - **Criterio de prompt:** Se le ingresaron fragmentos de código con problemas de alineación responsiva, pidiendo identificar errores y ajustar el layout para que coincida con el resto del equipo.
 - **Imágenes:**
   - Algunas ilustraciones del proyecto (por ejemplo, el logo del equipo) fueron creadas utilizando generación de imágenes con IA (Gemini Pro).
     - **Criterio de prompt:** Se le solicitó generar un emblema minimalista utilizando una paleta de colores azules, que representara el concepto de la constelación de Orión y el trabajo en equipo tecnológico.
+
+
+
