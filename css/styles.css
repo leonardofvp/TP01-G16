@@ -111,10 +111,20 @@ body {
     }
 }
 
+.header a {
+    text-decoration: none;
+    width: 90px;
+    height: 90px;
+}
+
+
+
+ 
 .logo-equipo {
-    width: 7rem;
+    width: 100%;
     border-radius: 50%;
     border: 0.5rem solid var(--color-detalle);
+
 }
 
 /* El menú de navegación deslizante lateral */
@@ -371,7 +381,7 @@ body {
 /* Móviles pequeños (400px) */
 @media (min-width: 400px) {
     .logo-equipo {
-        max-width: 35%;
+        max-width: 100%;
     }
     .container {
         padding: 0.5rem;
@@ -382,7 +392,7 @@ body {
 /* Tablets (900px) */
 @media (min-width: 900px) {
     .logo-equipo {
-        max-width: 30%;
+        max-width: 100%;
     }
 
     .navbar
@@ -393,12 +403,15 @@ body {
     .section-main {
         padding: 3.75rem 2.5rem;
     }
+      .header a:hover,  .menu-hamburguesa:hover, .contenedor-menu-hamburguesa:hover {
+    
+    transform: scale(1.1); /* agranda un poco */
 }
 
 /* Escritorio (1200px) */
 @media (min-width: 1200px) {
     .logo-equipo {
-        max-width: 25%;
+        max-width: 100%;
     }
     .equipo-grid{
         grid-template-columns: repeat(5, 1fr); /* 5 integrantes por fila */
@@ -407,4 +420,9 @@ body {
         max-width: 68.75rem;
         margin: 0 auto;
     }
+
+    .header a:hover, .tarjeta-item:hover, .menu-hamburguesa:hover, .contenedor-menu-hamburguesa:hover {
+    
+    transform: scale(1.2); /* agranda un poco */
 }
+
