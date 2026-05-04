@@ -344,7 +344,8 @@ body {
 
 	.imagen-pelicula, .leo-imagen-habilidad {
 		width: 10rem; 
-		border-radius: 10%;
+        height: 14rem;
+        border-radius: 10%;
 	}
 }
 
