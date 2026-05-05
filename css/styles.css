@@ -186,7 +186,7 @@ body {
 }
 
 .section-main {
-    margin: 5rem 1rem;
+    margin: clamp(2rem, 5vh, 5rem) 1rem;
 }
 
 /* --- DISEÑO DE GRILLA (RESPONSIVE) --- */
