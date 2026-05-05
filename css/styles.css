@@ -54,7 +54,7 @@ body {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #1a1a1a; 
+    background-color: var(--color-principal); 
     box-shadow: 0px 2px 7px 1px rgba(0,0,0,0.8);
 }
 
@@ -140,9 +140,7 @@ body {
     
     /* Ajustes para que se vea como en la muestra */
     background-repeat: no-repeat;
-    background-position: center top; /* Centrada arriba para que rodee el título */
-   
-  
+    background-position: center top; /* Centrada arriba para que rodee el título */  
 }
 
 /* El menú de navegación deslizante lateral */
